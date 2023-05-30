@@ -4,4 +4,5 @@ for i in range(9):
         if i < z:
             if str(i) + str(z) == "89":
                 print("89")
-            print("{}{}".format(i, z), end=", ")
+            else:
+                print("{}{}".format(i, z), end=", ")
