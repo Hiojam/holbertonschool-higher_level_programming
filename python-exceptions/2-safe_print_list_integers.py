@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
-    
     counter = 0
     try:
         for element in range(x):
@@ -9,6 +8,5 @@ def safe_print_list_integers(my_list=[], x=0):
                 counter += 1
     except Exception:
         return
-    
     print()
     return counter
