@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Task 2 """
+""" Task 3 """
 
 
 class Square:
