@@ -2,6 +2,4 @@
 
 
 class Square:
-
-    def __init__(self):
-        self.is_new = True
+    """A class representing a square."""
