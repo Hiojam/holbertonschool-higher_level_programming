@@ -8,8 +8,8 @@ class Square:
     __poserr = ValueError("position must be a tuple of 2 positive integers")
 
     def __init__(self, size=0, pos=(0, 0)):
-        self.__size = size
-        self.__position = pos
+        self.size = size
+        self.position = pos
 
     def area(self):
         """
@@ -41,21 +41,6 @@ class Square:
         else:
             raise TypeError("size must be an integer")
 
-    def my_print(self):
-        """ Print the area Square. """
-        if (self.__size == 0):
-            print("")
-        else:
-            for x in range(self.__position[1]):
-                print("")
-
-            for z in range(0, self.__size):
-                for y in range(0, self.__position[0]):
-                    print(" ", end="")
-                for i in range(0, self.__size):
-                    print("#", end="")
-                print(" ")
-
     @property
     def position(self):
         """ Get the position of the square
@@ -81,5 +66,20 @@ class Square:
                 raise self.__poserr
         except IndexError:
             raise self.__poserr
+
+    def my_print(self):
+        """ Print the area Square. """
+        if (self.__size == 0):
+            print("")
+        else:
+            for x in range(self.__position[1]):
+                print("")
+
+            for z in range(0, self.__size):
+                for y in range(0, self.__position[0]):
+                    print(" ", end="")
+                for i in range(0, self.__size):
+                    print("#", end="")
+                print(" ")
 
     pass
