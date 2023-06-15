@@ -5,13 +5,9 @@
 class Square:
     """A class representing a square."""
 
+    __poserr = ValueError("position must be a tuple of 2 positive integers")
+
     def __init__(self, size=0, pos=(0, 0)):
-        if (type(size) != int):
-            raise TypeError("size must be an integer")
-        
-        if (size < 0):
-            raise ValueError("size must be >= 0")
-        
         self.__size = size
         self.__position = pos
 
@@ -52,7 +48,7 @@ class Square:
         else:
             for x in range(self.__position[1]):
                 print("")
-            
+
             for z in range(0, self.__size):
                 for y in range(0, self.__position[0]):
                     print(" ", end="")
@@ -73,17 +69,17 @@ class Square:
     def position(self, value):
         """ Sets the position of the Square """
         if not (isinstance(value, tuple)):
-            raise TypeError("position must be a tuple of 2 positive integers")
-        
+            raise self.__poserr
+
         try:
             if (isinstance(value[0], int) and isinstance(value[1], int)):
                 if value[0] >= 0 and value[1] >= 0:
                     self.__position = value
                 else:
-                    raise ValueError("position must be a tuple of 2 positive integers")
+                    raise self.__poserr
             else:
-                raise TypeError("position must be a tuple of 2 positive integers")
+                raise self.__poserr
         except IndexError:
-            print("position must be a tuple of 2 positive integers")
-                
+            raise self.__poserr
+
     pass
