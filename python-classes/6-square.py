@@ -58,28 +58,29 @@ class Square:
 
         try:
             if (isinstance(value[0], int) and isinstance(value[1], int)):
-                if value[0] >= 0 and value[1] >= 0:
+                if (value[0] >= 0 and value[1] >= 0):
                     self.__position = value
                 else:
                     raise self.__poserr
             else:
                 raise self.__poserr
         except IndexError:
-            raise self.__poserr
+            print(self.__poserr)
 
     def my_print(self):
         """ Print the area Square. """
         if (self.__size == 0):
             print("")
-        else:
-            for x in range(self.__position[1]):
-                print("")
+            return
 
-            for z in range(0, self.__size):
-                for y in range(0, self.__position[0]):
-                    print(" ", end="")
-                for i in range(0, self.__size):
-                    print("#", end="")
-                print(" ")
+        for x in range(self.__position[1]):
+            print("")
+
+        for z in range(self.__size):
+            for y in range(self.__position[0]):
+                print(" ", end="")
+            for i in range(self.__size):
+                print("#", end="")
+            print(" ")
 
     pass
