@@ -1,5 +1,5 @@
 #!/usr/bin/python3
 
-
-def copy_list(a_list):
-    return a_list.copy()
+a = (1)
+b = (2)
+print(a is b)
