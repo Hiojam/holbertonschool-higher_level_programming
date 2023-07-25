@@ -1,3 +1,4 @@
+-- Create a new table on the current database.
 CREATE TABLE IF NOT EXISTS second_table (
     id INT,
     name VARCHAR(256),
